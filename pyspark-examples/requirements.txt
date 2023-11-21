@@ -1,0 +1,4 @@
+pyspark[connection]
+pandas
+debugpy
+pytest

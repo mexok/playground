@@ -1,0 +1,7 @@
+terraform-azure/azure_credentials.sh
+terraform-azure/terraform.tfvars
+terraform-azure/terraform.tfstate
+terraform-azure/.terraform/
+
+venv/
+__pycache__/

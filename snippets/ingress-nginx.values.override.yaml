@@ -1,0 +1,21 @@
+# If you need to open port 7077
+#NAMESPACE=ingress-basic
+#helm upgrade ingress-nginx ingress-nginx/ingress-nginx \
+#  --namespace $NAMESPACE \
+#  --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"=/healthz \
+#  -f cluster-deploy/ingress-nginx.values.override.yaml
+
+tcp:
+  7077: "default/my-spark-master-svc:7077"
+
+controller:
+  service:
+    enabled: true
+    ports:
+      http: 80
+      https: 443
+      spark: 7077
+    targetPorts:
+      http: http
+      https: https
+      spark: spark
