@@ -136,11 +136,15 @@ Execute the test code using the interactive shell.
 Additional notes
 ----------------
 
-Helm values can be exported via for additional custimization:
+Helm values can be exported via following command for additional custimization:
 
+```
 helm show values bitnami/spark >helm-spark-values.override.yaml
+```
 
-Things not implemented (also I have no intention of fixing):
+Things not implemented (and I have currently no intention of fixing):
 
- - Persistent public ip: the idea here is to fixate the public ip address of the
-   load balancer to avoid getting assigned a new ip if the service is recreated
+ - Persistent public ip: The idea here is to fixate the public ip address of the
+   load balancer to avoid getting assigned a new ip if the service is recreated.
+   As this is just an example, it's ok for me, but should be certainly fixed
+   in a production setup.
